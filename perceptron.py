@@ -31,12 +31,11 @@ class perceptron:
 
     #Dibuja la recta apartir de los pesos actuales
     def drawrect(self):
-        if self.W[0] or self.W[1]:
-            if self.W[1]!=0:
-                y=(self.umbral-self.x*self.W[0])/(self.W[1])
-                plt.plot(self.x,y)
-            else:
-                plt.axvline(x=self.umbral/self.W[0]) 
+        if self.W[1]!=0:
+            y=(self.umbral-self.x*self.W[0])/(self.W[1])
+            plt.plot(self.x,y)
+        else:
+            plt.axvline(x=self.umbral/self.W[0]) 
 
     #Dibuja los puntos cuya forma esta dada por symbol
     def drawpoints(self,x,y,symbol):
